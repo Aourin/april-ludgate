@@ -1,0 +1,29 @@
+@import '../base';
+
+.quote-container {
+
+  .quote-image-container {
+    
+  }
+  
+  .quote-copy {
+    &:before {
+      content : "\"";
+    }
+    &:after {
+      content : "\"";
+    }
+
+    text-align: center;
+  }
+
+  .controls-container {
+    text-align: center;
+
+    button {
+      @extend .button;
+
+      margin: 0 .35em;
+    }
+  }
+}

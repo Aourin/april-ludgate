@@ -1,0 +1,36 @@
+@import 'mixins';
+
+// === [ color guide ] ===========
+$pink: #FF5F69;
+$blue: darken(#1FC3F8, 10%);
+$light-blue: lighten($blue, 15%);
+$dark-blue: darken($blue, 15%);
+$soft-blue: #77aade;
+$grey: rgb(150,150,150);
+$dark-grey: darken($grey, 30%);
+$light-grey: lighten($grey, 35%);
+
+// === [ component colors ] ======
+// $header-background: url('/static/images/book-background.jpg');
+$body-background: #fff;
+
+// must be a color, not an image (used for heading transparency)
+$page-background: rgb(255,255,255);
+
+// === [ layout ] ================
+$max-width: 1000px;
+// $page-pull: 3.5em; // MUST be an em unit
+$page-pull: 0em;
+
+$content-padding: 1.5em;
+$section-border: 2px solid transparentize($grey, 0);
+
+// === [ breakpoints ] ===========
+$mobile-small: 320px;
+$mobile: 480px;
+$tablet-small: 600px;
+$tablet: 800px;
+
+// === [ fonts ] ================
+$font-body: 'Open Sans', sans-serif;
+$font-heading: 'Montserrat', Helvetica, sans-serif;

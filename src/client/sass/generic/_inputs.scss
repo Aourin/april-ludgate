@@ -1,0 +1,50 @@
+@import '../base';
+
+$input-font-size: .95em;
+$button-color: $soft-blue;
+
+.label,
+.form label {
+  font-size: $input-font-size;
+}
+
+.input,
+.form input {
+  margin: .25em .25em .25em 0;
+  padding: .5em .45em;
+
+  font-size: $input-font-size;
+
+  border: 3px solid transparentize($grey, .55);
+  transition: border-color.3s;
+
+  &:active,
+  &:focus {
+    border-color: transparentize($soft-blue, .25);
+    outline: none;
+  }
+}
+
+.button,
+.form button {
+  display: inline-block;
+  padding: .4em 1.2em;
+
+  color: $button-color;
+  font-size: 1em;
+  font-family: $font-heading;
+  text-align: center;
+
+  border: 2px solid $button-color;
+  background: none;
+  transition: background .3s, color .3s;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    background: transparentize($button-color, .5);
+  }
+}

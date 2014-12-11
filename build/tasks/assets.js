@@ -3,7 +3,7 @@ var gulp   = require('gulp'),
 
 module.exports = function assetsTask (config, plugins, exports) {
 
-  gulp.task('assets', ['sass', 'img', 'fonts'], function () {
+  gulp.task('assets', ['sass', 'img'], function () {
     // done...
   });
 
@@ -12,14 +12,14 @@ module.exports = function assetsTask (config, plugins, exports) {
   });
 
   gulp.task('sass', function () {
-    compileSass(gulp.src(config.sass.src));
+    compileSass(gulp.src(config.sass.src + '/*.scss'));
   });
 
   // gulp-watch changed its argument structure... do we
   // really need to include the gulp.src()?
   gulp.task('sass:watch', ['sass'], function () {
-    gulp.src(config.sass.src)
-      .pipe(plugins.watch(config.sass.src, compileSass));
+    // gulp.src(config.sass.src)
+    //   .pipe(plugins.watch(config.sass.src , compileSass));
   });
 
   function compileSass (stream) {
@@ -31,16 +31,10 @@ module.exports = function assetsTask (config, plugins, exports) {
       .pipe(gulp.dest(config.sass.dest));
   }
 
-  // copy font files to dist
-  gulp.task('fonts', function() {
-    // common.plumb(common.src('/fonts/**/*'))
-    //   .pipe(common.toDest('/fonts'));
-  });
-
   // copy images to dist
   // TODO: compression
   gulp.task('img', function() {
-    // common.plumb(common.src('/images/**/*'))
-    //   .pipe(common.toDest('/images'));
+    common.plumb(common.path(config.paths.src, '/client/img/**/*'))
+      .pipe(gulp.dest(common.path(config.paths.dest, '/client/img')));
   });
 };

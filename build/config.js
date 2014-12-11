@@ -23,8 +23,8 @@ exports.app.dest  = exports.paths.dest + '/client/app';
 // Sass
 // --------------------------
 exports.sass = {
-  src       : exports.src + '/client/sass',
-  dest      : exports.dest + '/client/css',
+  src       : exports.paths.src + '/client/sass',
+  dest      : exports.paths.dest + '/client/css',
   prefix    : ['last 2 versions', '> 2%'],
   cssMinify : {
     keepSpecialComments: 0

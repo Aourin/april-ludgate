@@ -1,0 +1,60 @@
+@import '../base';
+
+.heading {
+  $color: $blue;
+  $offset: 1.5em;
+  $font-size: 1.25em;
+  $padding: .3 * $font-size;
+
+  display: inline-block;
+  position: relative;
+  left: -$offset;
+  width: 45%;
+  margin: 1em 0;
+  padding: $padding 0 $padding (2 * $offset);
+
+  font-size: $font-size;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: $color;
+  z-index: 2;
+
+  @include breakpoint($tablet) {
+    display: block;
+    left: 0;
+    width: 65%;
+  }
+
+  @include breakpoint($mobile) {
+    width: 85%;
+    padding-left: $offset;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: $font-size * 1.5;
+    width: 0;
+    height: 0;
+    border-top: $offset solid darken($color, 20%);
+    border-left: $offset solid transparent;
+
+    @include breakpoint($tablet) {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    border-right: 1em solid $page-background;
+  }
+}

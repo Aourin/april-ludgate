@@ -1,0 +1,21 @@
+module.exports = exports = [
+  'If you ever speak to me in Spanish, please use the formal "usted."',
+  'I don\'t care about that prize. But I\'m gonna win because I want his happiness to go away.',
+  'I\'m trying to find a way to be annoyed by it, but I\'m coming up empty.',
+  'I love games that turn people against each other.',
+  'My instinct is to be mean to you.',
+  'But then I remembered that alcohol existed.',
+  'I want to make out with him and chew his eyebrows off.',
+  'I don\'t even want to be here. The air is too fresh. It\'s disgusting. I can\'t breathe.',
+  '[Dogs] should be rewarded for not being people. I hate people.',
+  'That\'s gross. I love it',
+  'I declare that everything you are saying is stupid.',
+  'Alcohol is fun and delicious.',
+  'It\'s not mean if he doesn\'t know about it. It\'s like talking about people behind their backs, everybody wins!',
+  'But at least I didn\'t make any new friendships.',
+  'Don\'t try to bond with me.',
+  'Because I don\'t really care what happens to them... Or anyone.',
+  'I hate talking to people about things.',
+  'I love ritalin and have low self-esteem.',
+  'I don\'t want to do things. I want to not do things.'
+];

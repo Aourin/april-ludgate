@@ -8,4 +8,14 @@ html(lang='en')
   body
     header
     div.page-container
+      h2.heading [ TEST ] April Quotes
+      div.inner-content
+        div.quote-container
+          div.quote-image-container
+            img
+          h3.quote-copy Test Copy
+          div.controls-container
+            button(data-action='previous' data-action-namespace='quote') Previous
+            button(data-action='random' data-action-namespace='quote') Random
+            button(data-action='next' data-action-namespace='quote') Next
     script(src='/static/app/app-bundle.js')

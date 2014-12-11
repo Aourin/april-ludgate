@@ -1,0 +1,40 @@
+@import '../base';
+
+header {
+  position: relative;
+  min-height: 300px;
+  padding: 2em 0 1.25em;
+  border-bottom: $section-border;
+  background: #fff;
+
+  .background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: lighten($soft-blue, 5%);
+  }
+
+  .content-container {
+    $title-size: 3em;
+    $title-color: rgb(40,40,40);
+
+    padding-top: .5em;
+    text-align: center;
+
+    .title {
+      margin-bottom: 0;
+      font-size: $title-size;
+      color: $title-color;
+      font-weight: bold;
+    }
+
+    .sub-title {
+      margin-top: .25em;
+      font-size: .65 * $title-size;
+      font-weight: normal;
+      color: darken(#fff, 2.5%);
+    }
+  }
+}
