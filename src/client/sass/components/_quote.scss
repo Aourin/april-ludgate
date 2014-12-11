@@ -3,9 +3,10 @@
 .quote-container {
 
   .quote-image-container {
-    
+    max-width: 40%;
+    margin: 0 auto;
   }
-  
+
   .quote-copy {
     &:before {
       content : "\"";

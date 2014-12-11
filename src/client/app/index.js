@@ -3,6 +3,11 @@ var $          = require('jquery'),
     QUOTES_LEN = QUOTES.length,
     _quotesIdx = 0;
 
+// TODO: actual initialization...
+// TODO: preload images
+// TODO: quote manager module
+// TODO: make this not suck LOL
+
 $(function () {
   var _actions    = {},
       _$quoteImg  = $('.quote-container .quote-image-container img'),
@@ -31,7 +36,14 @@ $(function () {
 
   function syncQuote () {
     _$quoteCopy.text(QUOTES[_quotesIdx]);
+    selectImage();
   }
+
+  function selectImage () {
+    // I'm super lazy!!!
+    _$quoteImg.attr('src', '/static/img/april_0' + Math.floor(Math.random() * 4) + '.jpg');
+  }
+  selectImage();
 
   function dispatchAction () {
     var $this     = $(this),
