@@ -1,0 +1,42 @@
+{
+  "name": "april-ludgate",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davezuko/april-ludgate.git"
+  },
+  "keywords": [
+    "front",
+    "end",
+    "sandbox",
+    "js",
+    "javascript"
+  ],
+  "author": "David Zukowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davezuko/april-ludgate/issues"
+  },
+  "homepage": "https://github.com/davezuko/april-ludgate",
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "compression": "~1.0.9",
+    "debug": "~0.7.4",
+    "express": "~4.7.2",
+    "jade": "~1.6.0",
+    "morgan": "~1.0.0",
+    "serve-favicon": "~2.0.1",
+    "browserify": "^7.0.0",
+    "gulp": "^3.8.10",
+    "gulp-common": "git+https://git@github.com/davezuko/gulp-common",
+    "gulp-load-plugins": "^0.8.0",
+    "minifyify": "^4.4.0",
+    "ramda": "^0.8.0",
+    "vinyl-source-stream": "^1.0.0"
+  }
+}
