@@ -5,6 +5,9 @@ dist
 src/server/config/*
 !src/server/config/development.js
 
+# Artifacts
+.DS_STORE
+
 # Logs
 logs
 *.log

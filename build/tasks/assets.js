@@ -31,16 +31,16 @@ module.exports = function assetsTask (config, plugins, exports) {
       .pipe(gulp.dest(config.sass.dest));
   }
 
-  // // copy font files to dist
-  // gulp.task('fonts', function() {
-  //   common.plumb(common.src('/fonts/**/*'))
-  //     .pipe(common.toDest('/fonts'));
-  // });
+  // copy font files to dist
+  gulp.task('fonts', function() {
+    // common.plumb(common.src('/fonts/**/*'))
+    //   .pipe(common.toDest('/fonts'));
+  });
 
-  // // copy images to dist
-  // // TODO: compression
-  // gulp.task('img', function() {
-  //   common.plumb(common.src('/images/**/*'))
-  //     .pipe(common.toDest('/images'));
-  // });
+  // copy images to dist
+  // TODO: compression
+  gulp.task('img', function() {
+    // common.plumb(common.src('/images/**/*'))
+    //   .pipe(common.toDest('/images'));
+  });
 };
