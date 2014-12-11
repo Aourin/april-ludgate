@@ -6,7 +6,8 @@ module.exports = exports = {
     listenPort : 3000,
     distFolder : path.resolve(__dirname, '../../../dist/client'),
     static     : {
-      cacheControl: 86400000 * 14 // 2 weeks
+      // cacheControl: 86400000 * 14 // 2 weeks
+      cacheControl: 86400000 * 0 // DEBUG ONLY
     }
   }
 };

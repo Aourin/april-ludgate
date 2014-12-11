@@ -16,6 +16,7 @@ body {
   width: 100%;
   max-width: $max-width;
   margin: -$page-pull auto 0;
+  padding: 1.5rem 0 1rem;
   z-index: 1;
 
   background: $page-background;
@@ -40,6 +41,10 @@ section {
   position: relative;
   padding: 0 $content-padding;
   z-index: 2;
+
+  @include breakpoint($mobile) {
+    padding: 0 1.5rem;
+  }
 }
 
 // ---------------------

@@ -2,9 +2,21 @@
 
 .quote-container {
 
+  @include breakpoint($mobile) {
+    padding: 0 $content-padding;
+  }
+
   .quote-image-container {
     max-width: 40%;
     margin: 0 auto;
+
+    @include breakpoint($tablet) {
+      max-width: 60%;
+    }
+
+    @include breakpoint($mobile) {
+      max-width: 100%;
+    }
   }
 
   .quote-copy {
@@ -16,6 +28,12 @@
     }
 
     text-align: center;
+    font-size: 1.75rem;
+    font-family: $font-heading;
+
+    @include breakpoint($mobile) {
+      font-size: 1.45rem;
+    }
   }
 
   .controls-container {
@@ -25,6 +43,12 @@
       @extend .button;
 
       margin: 0 .35em;
+
+      @include breakpoint($mobile) {
+        display: block;
+        width: 100%;
+        margin: .25em 0;
+      }
     }
   }
 }
