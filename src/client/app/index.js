@@ -1,11 +1,8 @@
-var $          = require('jquery'),
-    QUOTES     = require('./quotes'),
-    QUOTES_LEN = QUOTES.length,
-    _quotesIdx = 0;
+var $ = require('jquery'),
+    QuoteManager = require('./quotes');
 
 // TODO: actual initialization...
 // TODO: preload images
-// TODO: quote manager module
 // TODO: make this not suck LOL
 
 $(function () {
@@ -13,37 +10,25 @@ $(function () {
       _$quoteImg  = $('.quote-container .quote-image-container img'),
       _$quoteCopy = $('.quote-container .quote-copy');
 
-  _$quoteCopy.text(QUOTES[0]);
-
   _actions.quote = {
     previous : function (context) {
-      _quotesIdx = _quotesIdx === 0
-        ? QUOTES_LEN - 1 : _quotesIdx - 1;
-      syncQuote();
+      showQuote(QuoteManager.previous());
     },
 
     next : function (context) {
-      _quotesIdx = _quotesIdx === QUOTES_LEN - 1
-        ? 0 : _quotesIdx + 1;
-      syncQuote();
+      showQuote(QuoteManager.next());
     },
 
     random : function (context) {
-      _quotesIdx = Math.floor(Math.random() * QUOTES_LEN);
-      syncQuote();
+      showQuote(QuoteManager.random());
     }
   };
 
-  function syncQuote () {
-    _$quoteCopy.text(QUOTES[_quotesIdx]);
-    selectImage();
+  function showQuote (quote) {
+    _$quoteCopy.text(quote.copy);
+    _$quoteImg.attr('src', '/static/img/april_' + quote.img + '.jpg');
   }
-
-  function selectImage () {
-    // I'm super lazy!!!
-    _$quoteImg.attr('src', '/static/img/april_0' + Math.floor(Math.random() * 4) + '.jpg');
-  }
-  selectImage();
+  showQuote(QuoteManager.current());
 
   function dispatchAction () {
     var $this     = $(this),
